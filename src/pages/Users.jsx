@@ -30,7 +30,10 @@ const Users = () => {
               </li>
             ))}
           </ul> 
-          ): ""}
+          ) : (
+            <p>User not found.</p>
+          )
+          }
            
         </div>
       </main>
