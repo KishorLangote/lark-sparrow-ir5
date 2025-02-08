@@ -13,13 +13,13 @@ function App() {
     <main className='container py-4'>
       <div>
         <section className="bg-primary text-center text-light py-5">
-         <h1>User Database</h1>
+         <h1 className="display-3">User Database</h1>
          <p className="mb-5">View company's user data</p>
          <Link className="btn btn-light" to="/users" >View List of Users</Link>
         </section>
 
         <section className="bg-light text-center py-5">
-          <h1>User Statistics</h1>
+          <h1 className="display-3 fw-normal">User Statistics</h1>
           <p>View company's user statistics</p>
           <Link className="btn btn-primary" to="/statistics">View User Stats</Link>
         </section>
