@@ -6,12 +6,17 @@ import useFetch from "../hook/useFetch";
 const Users = () => {
 
   const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/users")
-  console.log(data)
+  // console.log(data)
+
+ 
   return (
     <>
     <Header />
       <main className="container py-4">
         <h1>List of Users</h1>
+         { loading && <p>Loading...</p> }
+         { error && <p>Error while fetching the data.</p> }
+
         <div>
           { data && data.length > 0 ? (
             <ul>

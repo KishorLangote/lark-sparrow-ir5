@@ -17,6 +17,9 @@ const UsersDetails = () => {
       <Header />
       <main className="container py-4">
         <h1>{userData?.name}</h1>
+
+        { loading && <p>Loading...</p> }
+
         { data && data.length > 0 ? (
           
          <ul className="list-group">
@@ -29,7 +32,7 @@ const UsersDetails = () => {
           <li className="list-group-item"><strong>City: </strong>{userData.address.city}</li>
           <li className="list-group-item"><strong>Zipcode: </strong>{userData.address.zipcode}</li>
          </ul>
-        ) : "User not found."}
+        ) :  error && <p>Error while fetching the data.</p> }
       </main>
       <Footer />
     </>
