@@ -10,7 +10,7 @@ const UsersDetails = () => {
   const { data, loading, error } = useFetch("https://jsonplaceholder.typicode.com/users")
   console.log(data)
 
-  const userData = data?.find((user) => user.id == userId.id)
+  const userData = data?.find((user) => user.id == parseInt(userId.id))
   console.log(userData)
   return (
     <>
